@@ -41,6 +41,11 @@ final class Session
 
     public function get($key, $default = null)
     {
+        if (array_key_exists($key, $_SESSION['flash'])) {
+            $key = $_SESSION['flash'][$key];
+            unset($_SESSION['flash'][$key]);
+            return $key;
+        }
         if (array_key_exists($key, $_SESSION)) {
             return $_SESSION[$key];
         }
@@ -50,6 +55,11 @@ final class Session
     public function set($key, $value)
     {
         $_SESSION[$key] = $value;
+    }
+    
+    public function flash($key, $value)
+    {
+        $_SESSION['flash'][$key] = $value;
     }
 
     public function delete($key)
