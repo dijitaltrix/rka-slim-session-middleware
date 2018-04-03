@@ -1,10 +1,10 @@
 {
-    "name": "akrabat/rka-slim-session-middleware",
-    "description": "Simple session middleware for Slim Framework",
+    "name": "dijitaltrix/slim-session-middleware",
+    "description": "Simple session middleware for Slim Framework, forked from RKA-Slim-Session-Middleware",
     "keywords": [
         "slim", "session", "middleware"
     ],
-    "homepage": "http://github.com/akrabat/rka-slim-session-middleware",
+    "homepage": "http://github.com/dijitaltrix/slim-session-middleware",
     "type": "library",
     "license": "BSD-3-Clause",
     "authors": [
@@ -12,6 +12,10 @@
             "name": "Rob Allen",
             "email": "rob@akrabat.com",
             "homepage": "http://akrabat.com"
+        },
+        {
+            "name": "Ian Grindley",
+            "email": "ian@dijix.com"
         }
     ],
     "require": {
@@ -22,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RKA\\": "RKA"
+            "Dijitaltrix\\": "Dijitaltrix"
         }
     }
 }
