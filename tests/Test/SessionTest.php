@@ -3,7 +3,7 @@ namespace Test;
 
 use Dijitaltrix\Session\Session;
 
-class SessionTest extends \PHPUnit_Framework_TestCase
+class SessionTest extends \PHPUnit\Framework\TestCase
 {
     public function setUp()
     {

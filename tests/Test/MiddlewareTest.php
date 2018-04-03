@@ -6,7 +6,7 @@ use Slim\Http\Environment;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
+class MiddlewareTest extends \PHPUnit\Framework\TestCase
 {
     public function setUp()
     {
@@ -17,7 +17,7 @@ class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
 
     public function testDefaults()
     {
-        $session = new SessionMiddleware();
+        $session = new Middleware();
 
         $this->assertEquals(PHP_SESSION_NONE, session_status());
         @$session->start(); // silence cookie warning
@@ -37,7 +37,7 @@ class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
 
     public function testOptions()
     {
-        $session = new SessionMiddleware([
+        $session = new Middleware([
             'name' => 'Test',
             'lifetime' => '3600',
             'path' => '/test',
@@ -64,7 +64,7 @@ class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
 
     public function testStartingSessionTwiceCausesNoWarning()
     {
-        $session = new SessionMiddleware([]);
+        $session = new Middleware([]);
 
         $this->assertEquals(PHP_SESSION_NONE, session_status());
         @$session->start(); // silence cookie warning
@@ -76,7 +76,7 @@ class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
 
     public function testCallStartsSession()
     {
-        $session = new SessionMiddleware([]);
+        $session = new Middleware([]);
 
         $request = Request::createFromEnvironment(Environment::mock());
         $response = new Response();

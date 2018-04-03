@@ -66,5 +66,8 @@ final class Middleware
         session_name($options['name']);
         session_cache_limiter($options['cache_limiter']);
         session_start();
+        if ( ! isset($_SESSION['flash'])) {
+            $_SESSION['flash'] = [];
+        } 
     }
 }
