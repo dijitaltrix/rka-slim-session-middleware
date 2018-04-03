@@ -5,15 +5,15 @@
  * Copyright 2015 Rob Allen (rob@akrabat.com).
  * License: New-BSD
  */
-namespace RKA;
+namespace Dijitaltrix\Session;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-final class SessionMiddleware
+final class Middleware
 {
     protected $options = [
-        'name' => 'RKA',
+        'name' => 'session',
         'lifetime' => 7200,
         'path' => null,
         'domain' => null,

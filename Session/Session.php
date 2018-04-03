@@ -6,7 +6,7 @@
  * Copyright 2015 Rob Allen (rob@akrabat.com).
  * License: New-BSD
  */
-namespace RKA;
+namespace Dijitaltrix\Session;
 
 final class Session
 {

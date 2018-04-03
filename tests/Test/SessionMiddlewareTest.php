@@ -1,7 +1,7 @@
 <?php
-namespace RKATest;
+namespace Test;
 
-use RKA\SessionMiddleware;
+use Dijitaltrix\Session\Middleware;
 use Slim\Http\Environment;
 use Slim\Http\Request;
 use Slim\Http\Response;
@@ -32,7 +32,7 @@ class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, session_get_cookie_params());
 
         $this->assertEquals(PHP_SESSION_ACTIVE, session_status());
-        $this->assertEquals('RKA', session_name());
+        $this->assertEquals('session', session_name());
     }
 
     public function testOptions()

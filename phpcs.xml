@@ -17,6 +17,6 @@
     </rule>
 
     <!-- Paths to check -->
-    <file>RKA</file>
+    <file>Session</file>
     <file>tests</file>
 </ruleset>

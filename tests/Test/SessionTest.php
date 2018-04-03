@@ -1,7 +1,7 @@
 <?php
-namespace RKATest;
+namespace Test;
 
-use RKA\Session;
+use Dijitaltrix\Session\Session;
 
 class SessionTest extends \PHPUnit_Framework_TestCase
 {
